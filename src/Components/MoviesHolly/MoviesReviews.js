@@ -74,6 +74,7 @@ const MoviesReviews= ({route,navigation}) => {
 
 if(flag){
     const{author,id,title}=Movies
+    //'https://content.jwplatform.com/manifests/yp34SRmf.m3u8'
 
 
     return (
@@ -93,7 +94,7 @@ if(flag){
             ref={video}
             style={styles.video}
             source={{
-            uri: 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8',
+            uri:"http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4" ,
         }}
         useNativeControls
         resizeMode="contain"

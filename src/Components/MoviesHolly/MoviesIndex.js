@@ -12,7 +12,7 @@ const MoviesIndex = ({navigation}) => {
     const{MoviesHolly}=useSelector((state)=>state.Movies)
     const Movie=MoviesHolly ? MoviesHolly.results:[]
 
-    const categories=["Movies","FavMovies",""]
+    const categories=["Movies"]
     const [categoryIndex,setcategoryIndex]=useState(0)
 
   
@@ -60,7 +60,7 @@ const MoviesIndex = ({navigation}) => {
                     <Text style={{fontSize:38,fontWeight:"bold",color:"green",marginTop:-12}}>Movies App</Text>
 
                 </View>
-                <Icons name="cart-outline" size={24}/>
+                <Icons name="beer-outline" size={24} color="#4caf50"/>
 
             </View>
             <View style={{marginTop:30,flexDirection:"row"}}>

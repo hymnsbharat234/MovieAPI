@@ -114,7 +114,7 @@ export default MoviesIndex
 
 const styles = StyleSheet.create({
     header: {
-        marginTop:20,
+        marginTop:25,
         flexDirection:"row",
         justifyContent:"space-between",
 

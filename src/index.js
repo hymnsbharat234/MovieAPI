@@ -18,14 +18,17 @@ const store=configureStore({
 
 const index=()=>{
     return(
-        ReactDOM.render(
-            <React.StrictMode>
+        <>
+        <React.StrictMode>
                 <Provider store={store}>
                 <App />
                 </Provider>
-            </React.StrictMode>,
-            document.getElementById('root')
-        )
+            </React.StrictMode>
+        </>
+        // ReactDOM.render(
+        //     ,
+        //     document.getElementById('root')
+        // )
     )
 }
 export default index

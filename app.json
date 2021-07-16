@@ -4,7 +4,7 @@
     "slug": "Hymnsbharat",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/s2.png",
+    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/it2.png",
       "resizeMode": "contain",
@@ -22,7 +22,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/s4.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.Hymns.hymnsbharat",

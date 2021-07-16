@@ -1,6 +1,6 @@
 
 import React,{useEffect,useState} from 'react'
-import {Text,View,StyleSheet,Image,FlatList,ActivityIndicator, TouchableOpacity,StatusBar,SafeAreaView,Platform, ScrollView} from "react-native"
+import {Text,View,StyleSheet,Image,FlatList,ActivityIndicator,   ToastAndroid,TouchableOpacity,StatusBar,SafeAreaView,Platform, ScrollView} from "react-native"
 import Icon from "react-native-vector-icons/Ionicons"
 import {useDispatch,useSelector} from "react-redux"
 import Icons from "react-native-vector-icons/FontAwesome5"
@@ -22,6 +22,13 @@ const MoviesDetail = ({route,navigation}) => {
         flag=true
 
     }
+    const showToastWithGravity = () => {
+        ToastAndroid.showWithGravity(
+          "Added to Favourite",
+          ToastAndroid.SHORT,
+          ToastAndroid.TOP
+        );
+      };
 
    
 
@@ -30,13 +37,15 @@ if(flag){
 
 
     return (
+       
         <SafeAreaView style={{
             flex:1,backgroundColor:"#fff"}}>
                 <View style={{paddingHorizontal:20,
-                marginTop:20,flexDirection:"row",justifyContent:"space-between"
+                marginTop:25,flexDirection:"row",justifyContent:"space-between"
                 }}>
+                    
                     <Icon name="arrow-back-outline" size={28} onPress={()=>navigation.goBack()} />
-                    <Icon name="bookmarks-outline" size={28}  />
+                    <Icon name="bookmarks-outline" size={28}    onPress={() => showToastWithGravity()} />
 
                 </View>
                 <View style={{flex:0.45,marginTop:25,justifyContent: 'center',alignItems:"center",}}>

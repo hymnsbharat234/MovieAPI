@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "Doctor",
-    "slug": "Doctor",
+    "name": "Hymns",
+    "slug": "Hymnsbharat",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/s1.jpg",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/it1.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,12 +18,15 @@
     ],
     "ios": {
       "supportsTablet": true
+
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/s2.jpg",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.Hymns.hymnsbharat",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

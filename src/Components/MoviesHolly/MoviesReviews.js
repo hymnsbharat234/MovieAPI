@@ -1,7 +1,7 @@
 
 import React,{useEffect,useState,useRef} from 'react'
 import { Video, AVPlaybackStatus } from 'expo-av';
-import {Text,View,StyleSheet,Image,FlatList,ActivityIndicator,Button, TouchableOpacity,StatusBar,SafeAreaView,Platform, ScrollView} from "react-native"
+import {Text,View,StyleSheet,Image,ToastAndroid,FlatList,ActivityIndicator,Button, TouchableOpacity,StatusBar,SafeAreaView,Platform, ScrollView} from "react-native"
 import Icon from "react-native-vector-icons/Ionicons"
 import {useDispatch,useSelector} from "react-redux"
 import Icons from "react-native-vector-icons/FontAwesome5"
@@ -27,6 +27,7 @@ const MoviesReviews= ({route,navigation}) => {
         flag=true
 
     }
+    
 
     const renderList=({author,content})=>{
         return (
@@ -75,13 +76,14 @@ const MoviesReviews= ({route,navigation}) => {
 if(flag){
     const{author,id,title}=Movies
     //'https://content.jwplatform.com/manifests/yp34SRmf.m3u8'
+    //http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4
 
 
     return (
         <SafeAreaView style={{
             flex:1,backgroundColor:"#fff"}}>
                 <View style={{paddingHorizontal:20,
-                marginTop:20,flexDirection:"row",justifyContent:"space-between"
+                marginTop:25,flexDirection:"row",justifyContent:"space-between"
                 }}>
                     <Icon name="arrow-back-outline" size={28} onPress={()=>navigation.goBack()} />
                     
@@ -93,9 +95,7 @@ if(flag){
                 <Video
             ref={video}
             style={styles.video}
-            source={{
-            uri:"http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4" ,
-        }}
+            source={require('../../../assets/warcraft.mp4')}
         useNativeControls
         resizeMode="contain"
         isLooping
